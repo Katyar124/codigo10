@@ -1,0 +1,49 @@
+<h1> ¿Quieres volver conmigo? </h1>
+<a href="#" class="button" id="Si">SI</a>
+<a href="#" class="button" id="No">No</a>
+*{
+  padding:0;
+  margin:0;
+}
+body{
+  width:100vw;
+  height:100vh;
+  display:flex;
+  font-family: sans-serif;
+}
+
+
+h1{
+  margin: auto; 
+  margin-top:200px;
+}
+.button{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-decoration:none;
+  background:#000;
+  color:#fff;
+  padding:20px 35px; 
+  font-size:20px;
+}
+#Si{
+  left: 20%;
+  transform: translateY(-50%); translateX(-20%);
+}
+#No{
+  left: 80%;
+  transform: translateY(-50%); translateX(-80%);
+}
+let Si=document.getElementById('Si');
+Si.addEventListener("click",function(e){
+  alert("Gracias sabia que aceptarias"); 
+} );
+
+let No=document.getElementById('No');
+No.addEventListener("mousemove",function(e){
+  let x = Math.round( Math.random() *93 );
+  let y = Math.round( Math.random() *93 );
+  No.style.left = x+"%";
+  No.style.top = y+"%";
+} );
